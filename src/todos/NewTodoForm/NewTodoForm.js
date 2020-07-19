@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../../store/actions';
 import './NewTodoForm.css';
 
-function NewTodoForm({todos, onCreateNewTodo}) {
+export function NewTodoForm({todos, onCreateNewTodo}) {
     const [todoText, setTodoText] = useState('');
     const [alreadyExist, setAlreadyExist] =  useState(false);
     useEffect(() => {
@@ -45,4 +45,5 @@ const mapDispatchToProps = dispatch => {
         onCreateNewTodo : (text) => dispatch(actions.createNewTodo(text))
     }
 }
+
 export default connect(mapStateToProps,mapDispatchToProps)(NewTodoForm);

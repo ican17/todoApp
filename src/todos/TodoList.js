@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import './TodoList.css';
 
-function TodoList({todos = []}) {
+export function TodoList({todos = []}) {
     return (
         <div className="todos-wrapper">
             {todos.map((todo,i) => <TodoListItem key={i} todo = {todo}/>)}            

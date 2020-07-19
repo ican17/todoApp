@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../../store/actions';
 import './TodoListItem.css';
 
-function TodoListItem({ todo, onRemoveTodo }) {
+export function TodoListItem({ todo, onRemoveTodo }) {
     return (
         <div className="todo-wrapper">
             <h3 className="todo-text">{todo.text}</h3>
