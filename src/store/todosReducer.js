@@ -25,6 +25,17 @@ const reducer = (state = initialState, action) => {
                 todos : todos
             }
         }
+        case actionTypes.COMPLETED_TODO:{
+            const {text} = action.payload;
+            const index = state.todos.findIndex( todo => todo.text === text);
+            const todos = [...state.todos];
+            todos[index].isCompleted = true;
+            
+            return {
+                ...state,
+                todos : todos
+            }
+        }
                 
         default:
             return state;
