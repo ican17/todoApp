@@ -7,7 +7,8 @@
       "@babel/preset-react"
     ],
     "plugins": [
-      "@babel/plugin-proposal-class-properties"
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime"
     ]
   },
   "main": "index.js",
@@ -24,8 +25,10 @@
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "react": "^16.13.1",
@@ -33,7 +36,9 @@
     "react-hot-loader": "^4.12.21",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions';
 import './NewTodoForm.css';
@@ -6,9 +6,7 @@ import './NewTodoForm.css';
 export function NewTodoForm({todos, onCreateNewTodo}) {
     const [todoText, setTodoText] = useState('');
     const [alreadyExist, setAlreadyExist] =  useState(false);
-    useEffect(() => {
-        console.log(todos);
-    }, []);
+
     const onTodoTextInputChangedHandler = (e) => {
         if(alreadyExist) setAlreadyExist(false);
         setTodoText(e.target.value);
