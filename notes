@@ -1,0 +1,22 @@
+#### Goal: this app is built to understand the react ecosystem.
+### commands:
+# npm init -y
+# git init
+create public, src folders
+create public/index.html file
+# npm i @babel/core @babel/cli @babel/preset-env @babel/preset-react (babel for es6 & jsx) 
+create .babelrc
+Add following into it:
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+create src/index.js, src/App.js, src/App.css
+setup webpack to BUILD & SERVE the app for us 
+# npm i webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
+create file webpack.config.js
+# npx webpack-dev-server --mode development
+add this command to scripts in package.json
+add "build" : "npx webpack --mode development", in package.json  command to build the project
+Watch changes 
+# npm i react-hot-loader
+edit App.js to setup our server to watch any changes live
