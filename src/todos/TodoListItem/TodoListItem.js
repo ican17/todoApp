@@ -12,12 +12,14 @@ const TodoWrapper = styled.div`
     box-sizing: border-box;
     
 `;
-
+export const getStyleForTodoWarning = (createdAt, duration) => {
+    return new Date(createdAt) > (new Date(Date.now() - duration))? 'grey':'red'
+}
 // extending the style
-// use it only for incompleted items
-// red background if they have been created more than 1 hour ago
+// use it only for incompleted items 
+// red background if they have been created before more than the specefied duration in milisecs
 const TodoWrapperWithWarning = styled(TodoWrapper)`
-background-color:${props => new Date(props.createdAt) > (new Date(Date.now() - 60000 * 60))?'grey':'red'};
+background-color:${props => getStyleForTodoWarning(props.createdAt, 60000 * 60)};
 `;
 export function TodoListItem({ todo, onRemoveTodo, onMarkAsCompleted, todos }) {
     const isCompleted =  todo => {
