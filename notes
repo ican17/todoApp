@@ -11,52 +11,57 @@ ________________________________________________________________________________
     ## Testing ==> components, reducers, thunks, selectors, actions, styled components
 ________________________________________________________________________________
 
-### commands:
-# npm init -y
-# git init
-create public, src folders
-create public/index.html file
-# npm i @babel/core @babel/cli @babel/preset-env @babel/preset-react (babel for es6 & jsx) 
-create .babelrc
-Add following into it:
-{
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
-}
-create src/index.js, src/App.js, src/App.css
-setup webpack to BUILD & SERVE the app for us 
-# npm i webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
-create file webpack.config.js
-# npx webpack-dev-server --mode development
-add this command to scripts in package.json
-add "build" : "npx webpack --mode development", in package.json  command to build the project
-Watch changes 
-# npm i react-hot-loader
-edit App.js to setup our server to watch any changes live
+### Steps:
 
-Setting up redux:
-# npm i redux react-redux
-Redux Best practices :
-1# export both versions connected and unconnected components [For deply, for tests]
-2# keep redux actions and asyn operations out of reducers
-3# Think carefully about connecting components
-    {connecting a comp can, in practice, make it less reusable!}
+#1 npm init -y
+#2 git init
+#3 create public, src folders
+#4 create public/index.html file
+#5 npm i @babel/core @babel/cli @babel/preset-env @babel/preset-react (babel for es6 & jsx) 
+#6 Add following to package.json:
+"babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+    ]
+  },
+#7 create src/index.js, src/App.js, src/App.css
+#8 setup webpack to BUILD & SERVE the app for us 
+    # npm i webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
+    create file webpack.config.js
+    # npx webpack-dev-server --mode development
+    add the later command to scripts in package.json to run the server => "dev": "npx webpack-dev-server --mode development",
+    add "build" : "npx webpack --mode development", in package.json  command to build the project
+#9 setup for watching changes 
+    # npm i react-hot-loader
+    edit App.js to setup our server to watch any changes live
 
-Setting up redux-persist
-# npm i redux-persist
+#10 Setting up redux:
+    # npm i redux react-redux
+    Redux Best practices :
+        1# export both versions connected and unconnected components [For deply, for tests]
+        2# keep redux actions and asyn operations out of reducers
+        3# Think carefully about connecting components
+            {connecting a comp can, in practice, make it less reusable!}
 
-Adding redux devtools extension
+#11 Setting up redux-persist
+    # npm i redux-persist
 
-Setting up a side-effect library (Redux Thunk in our case)
-# npm i redux-thunk redux-devtools-extension @babel/runtime @babel/plugin-transform-runtime
+#12 Adding redux devtools extension
 
-Create Selectors & using Reselect
-# npm i reselct
+#13 Setting up a side-effect library (Redux Thunk in our case)
+    # npm i redux-thunk redux-devtools-extension @babel/runtime @babel/plugin-transform-runtime
 
-Setting up styled-components
-# npm i styled-components
+#14 Create Selectors using Reselect
+    # npm i reselct
 
-Setting up testing environment 
-# npm i mocha chai @babel/register
-add new scritp : "test" : "mocha \"src/**/*.test.js\" --required @babel/register --recursive"
-# npm i sinon node-fetch fetch-mock # useful to test thunks
+#15 Setting up styled-components
+    # npm i styled-components
+
+#16 Setting up testing environment 
+    # npm i mocha chai @babel/register
+    add new scritp for test => "test" : "mocha \"src/**/*.test.js\" --required @babel/register --recursive"
+    # npm i sinon node-fetch fetch-mock (useful to test thunks)
 
