@@ -58,4 +58,5 @@ Setting up styled-components
 Setting up testing environment 
 # npm i mocha chai @babel/register
 add new scritp : "test" : "mocha \"src/**/*.test.js\" --required @babel/register --recursive"
+# npm i sinon node-fetch fetch-mock # useful to test thunks
 
