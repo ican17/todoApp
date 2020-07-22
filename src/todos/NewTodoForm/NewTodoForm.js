@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../store/actions';
+import {createNewTodoReq} from '../../store/thunks';
+
 import './NewTodoForm.css';
 
 export function NewTodoForm({todos, onCreateNewTodo}) {
@@ -40,7 +42,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onCreateNewTodo : (text) => dispatch(actions.createNewTodo(text))
+        onCreateNewTodo : (text) => dispatch(createNewTodoReq(text))
     }
 }
 

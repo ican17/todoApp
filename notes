@@ -1,4 +1,14 @@
 #### Goal: this app is built to understand the react ecosystem.
+___________________________________________________________________
+ # Seperation of concerns within an React application:
+
+    ## Component ==> Display data
+    ## Redux ==> Manage a global State
+    ## Thunks ==> Side-effect logic
+    ## Selectors ==>
+    ## Styled Component ==>
+___________________________________________________________________
+
 ### commands:
 # npm init -y
 # git init
@@ -20,3 +30,19 @@ add "build" : "npx webpack --mode development", in package.json  command to buil
 Watch changes 
 # npm i react-hot-loader
 edit App.js to setup our server to watch any changes live
+
+Setting up redux:
+# npm i redux react-redux
+Redux Best practices :
+1# export both versions connected and unconnected components [For deply, for tests]
+2# keep redux actions and asyn operations out of reducers
+3# Think carefully about connecting components
+    {connecting a comp can, in practice, make it less reusable!}
+
+Setting up redux-persist
+# npm i redux-persist
+
+Adding redux devtools extension
+
+Setting up a side-effect library (Redux Thunk in our case)
+# npm i redux-thunk redux-devtools-extension @babel/runtime @babel/plugin-transform-runtime

@@ -1,23 +1,37 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import TodoListItem from './TodoListItem/TodoListItem';
-import * as actions from '../store/actions';
 import {connect} from 'react-redux';
-
+import {loadTodos} from '../store/thunks';
+//
 
 import './TodoList.css';
 
-export function TodoList({todos = []}) {
-    return (
+export function TodoList({todos = [], onLoadTodos, isLoading}) {
+    useEffect(() => {
+        onLoadTodos();
+    }, []);
+    const  content = isLoading?
+    <div>Loading Todos....</div> :
+    (
         <div className="todos-wrapper">
-            {todos.map((todo,i) => <TodoListItem key={i} todo = {todo}/>)}            
+                {todos.map((todo) => <TodoListItem key={todo.id} todo = {todo}/>)}     
         </div>
-    );
+    )
+    ;
+    
+    return content;
 }
 
 const mapStateToProps = state => {
     return {
-        todos : state.todos.todos
+        todos : state.todos.todos,
+        isLoading: state.todos.isLoading
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        onLoadTodos : () => dispatch(loadTodos())
     }
 }
 
-export default connect(mapStateToProps, null)(TodoList);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
