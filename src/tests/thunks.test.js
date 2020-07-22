@@ -4,8 +4,8 @@ import {expect} from 'chai';
 import sinon, { fake } from 'sinon';
 import {loadTodos} from '../store/thunks';
 
-describe('Testing the loadTodos thunk', () => {
-    it('Success scenario, dispatching the correct actions', async () => {
+describe('Testing thunks', () => {
+    it('loadTodos thunk - Success scenario, dispatching the correct actions', async () => {
         // create a fake dispatch function 
         const fakeDispatch =  sinon.spy();
 
