@@ -8,6 +8,7 @@ ________________________________________________________________________________
     ## Selectors ==> Logic for combining, filtering & transforming stored data
     ## Styled Component ==> Styling component,
              using CSS in javascript instead of using css modules for example
+    ## Testing ==> components, reducers, thunks, selectors, actions, styled components
 ________________________________________________________________________________
 
 ### commands:
@@ -51,5 +52,10 @@ Setting up a side-effect library (Redux Thunk in our case)
 Create Selectors & using Reselect
 # npm i reselct
 
-Setting up styled-component
+Setting up styled-components
+# npm i styled-components
+
+Setting up testing environment 
+# npm i mocha chai @babel/register
+add new scritp : "test" : "mocha \"src/**/*.test.js\" --required @babel/register --recursive"
 
