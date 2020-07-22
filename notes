@@ -1,13 +1,14 @@
 #### Goal: this app is built to understand the react ecosystem.
-___________________________________________________________________
+________________________________________________________________________________
  # Seperation of concerns within an React application:
 
     ## Component ==> Display data
     ## Redux ==> Manage a global State
     ## Thunks ==> Side-effect logic
     ## Selectors ==> Logic for combining, filtering & transforming stored data
-    ## Styled Component ==>
-___________________________________________________________________
+    ## Styled Component ==> Styling component,
+             using CSS in javascript instead of using css modules for example
+________________________________________________________________________________
 
 ### commands:
 # npm init -y
@@ -49,3 +50,6 @@ Setting up a side-effect library (Redux Thunk in our case)
 
 Create Selectors & using Reselect
 # npm i reselct
+
+Setting up styled-component
+

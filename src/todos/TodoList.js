@@ -3,9 +3,14 @@ import TodoListItem from './TodoListItem/TodoListItem';
 import {getLoadingState,getCompletedTodos, getInCompletedTodos} from '../store/selectors';
 import {connect} from 'react-redux';
 import {loadTodos} from '../store/thunks';
+import styled from 'styled-components'
 //
 
-import './TodoList.css';
+const TodosWrapper = styled.div`
+    
+    padding: 2px;
+`;
+
 
 export function TodoList({completedTodos, incompletedTodos, onLoadTodos, isLoading}) {
     useEffect(() => {
@@ -14,13 +19,15 @@ export function TodoList({completedTodos, incompletedTodos, onLoadTodos, isLoadi
     const  content = isLoading?
     <div>Loading Todos....</div> :
     (
-        <div className="todos-wrapper">
+        <TodosWrapper>
+
                 <h3>Incompleted:</h3>
-                {incompletedTodos.map((todo) => <TodoListItem key={todo.id} todo = {todo}/>)}     
-                <hr/>
+                    {incompletedTodos.map((todo) => <TodoListItem key={todo.id} todo = {todo}/>)}
+                     
                 <h3>Completed:</h3>
-                {completedTodos.map((todo) => <TodoListItem key={todo.id} todo = {todo}/>)}     
-        </div>
+                    {completedTodos.map((todo) => <TodoListItem key={todo.id} todo = {todo}/>)}
+                     
+        </TodosWrapper>
     )
     ;
     
