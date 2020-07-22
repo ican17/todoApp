@@ -1,9 +1,9 @@
 #### Goal: this app is built to understand the react ecosystem.
 ________________________________________________________________________________
- # Seperation of concerns within an React application:
+ # Separation of concerns within an React application:
 
     ## Component ==> Display data
-    ## Redux ==> Manage a global State
+    ## Redux ==> Manage a global State for the application
     ## Thunks ==> Side-effect logic
     ## Selectors ==> Logic for combining, filtering & transforming stored data
     ## Styled Component ==> Styling component,
