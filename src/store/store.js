@@ -8,7 +8,7 @@ import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 
 
 const reducers = {
-    todos: todosReducer,
+    todosModule: todosReducer,
 };
 const persistConfig = {
     key: 'root',

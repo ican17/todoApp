@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import * as actions from '../../store/actions';
+import {getTodos} from '../../store/selectors';
 import {createNewTodoReq} from '../../store/thunks';
 
 import './NewTodoForm.css';
@@ -36,7 +36,7 @@ export function NewTodoForm({todos, onCreateNewTodo}) {
 }
 const mapStateToProps = state => {
     return {
-        todos : state.todos.todos
+        todos : getTodos(state)
     }
 }
 

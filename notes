@@ -5,7 +5,7 @@ ___________________________________________________________________
     ## Component ==> Display data
     ## Redux ==> Manage a global State
     ## Thunks ==> Side-effect logic
-    ## Selectors ==>
+    ## Selectors ==> Logic for combining, filtering & transforming stored data
     ## Styled Component ==>
 ___________________________________________________________________
 
@@ -46,3 +46,6 @@ Adding redux devtools extension
 
 Setting up a side-effect library (Redux Thunk in our case)
 # npm i redux-thunk redux-devtools-extension @babel/runtime @babel/plugin-transform-runtime
+
+Create Selectors & using Reselect
+# npm i reselct
