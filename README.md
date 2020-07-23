@@ -1,7 +1,9 @@
 # todoApp
 This is a Basic Todo app made to understand the React ecosystem.
+
 Make sure to visit the notes file for more information about the react ecosystem:
 https://github.com/ican17/todoApp/blob/master/notes
+
 Scripts:
   - npm run dev #to start the server
   - npm run test # to run tests 
