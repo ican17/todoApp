@@ -12,3 +12,4 @@ Scripts:
 Requirements:
   - In order to use this app, you have to set up the todoAPI that you can find here: https://github.com/ican17/todoAPI
 
+NOTE: Styling the app was not the primary goal, so it looks horrible.
