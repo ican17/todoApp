@@ -22,7 +22,7 @@ __________
 
 #4 create public/index.html file
 
-#5 npm i @babel/core @babel/cli @babel/preset-env @babel/preset-react (babel for es6 & jsx) 
+#5 npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react (babel for es6 & jsx) 
 
 #6 Add following to package.json:
 "babel": {
@@ -37,14 +37,14 @@ __________
 #7 create src/index.js, src/App.js, src/App.css
 
 #8 setup webpack to BUILD & SERVE the app for us 
-    # npm i webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
+    # npm i --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader babel-loader
     create file webpack.config.js
     # npx webpack-dev-server --mode development
     add the later command to scripts in package.json to run the server => "dev": "npx webpack-dev-server --mode development",
     add "build" : "npx webpack --mode development", in package.json  command to build the project
 
 #9 setup for watching changes 
-    # npm i react-hot-loader
+    # npm i --save-dev react-hot-loader
     edit App.js to setup our server to watch any changes live
 
 #10 Setting up redux:
@@ -70,7 +70,7 @@ __________
     # npm i styled-components
 
 #16 Setting up testing environment 
-    # npm i mocha chai @babel/register
+    # npm i --save-dev mocha chai @babel/register
     add new scritp for test => "test" : "mocha \"src/**/*.test.js\" --required @babel/register --recursive"
-    # npm i sinon node-fetch fetch-mock (useful to test thunks)
+    # npm i --save-dev sinon node-fetch fetch-mock (useful to test thunks)
 
